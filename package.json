@@ -1,0 +1,36 @@
+{
+  "name": "cn-food-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for Chinese food nutrition data (~1724 foods, 25 nutrients per 100g)",
+  "type": "module",
+  "bin": {
+    "cn-food-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "node dist/index.js",
+    "convert-data": "tsx scripts/convert-csv.ts"
+  },
+  "keywords": [
+    "mcp",
+    "food",
+    "nutrition",
+    "chinese-food"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.26.0",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@types/node": "^25.2.3",
+    "csv-parse": "^6.1.0",
+    "tsup": "^8.5.1",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  }
+}
